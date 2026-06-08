@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sharan E</title>
+  <meta name="description" content="Contact Sharan E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  {{HEADER}}
+
+  <main>
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Get in touch</h2>
+      <p>If you'd like to reach out, use the details below or send a quick message.</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+        <li><strong>Location:</strong> Springfield, USA</li>
+      </ul>
+      <form action="#" method="post" aria-label="Contact form">
+        <label for="name">Name</label><br>
+        <input id="name" name="name" type="text" placeholder="Your name"><br>
+        <label for="email">Email</label><br>
+        <input id="email" name="email" type="email" placeholder="you@example.com"><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="5"></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  {{FOOTER}}
+</body>
+</html>
