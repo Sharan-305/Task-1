@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharan E | Home</title>
+  <meta name="description" content="Official portfolio of Sharan E - Data Scientist and Developer">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script>
+  (function() {
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+<div class="bubbles-container">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+</div>
+
+<header role="banner">
+  <nav aria-label="Main Navigation">
+    <h1>Sharan E</h1>
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle Theme">
+        <!-- Sun Icon (shows when theme is light, clicks to set dark) -->
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M16.24 16.24l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <!-- Moon Icon (shows when theme is dark, clicks to set light) -->
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('portfolio-theme', newTheme);
+      });
+    }
+
+    // Add active page indicator automatically based on pathname
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      const linkHref = link.getAttribute('href');
+      if (linkHref === currentPath) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  });
+</script>
+
+
+  <main id="main-content">
+    <section aria-labelledby="hero-title" class="hero">
+      <h2 id="hero-title">Welcome to My Portfolio</h2>
+      <p>I am Sharan E, a developer passionate about Data Science, Software Development, Game Development, and AR Design.</p>
+      <a href="projects.html" class="cta-button">View Projects</a>
+    </section>
+
+    <section aria-labelledby="skills-heading" class="skills-section">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills-grid">
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">🐍</span>
+          <span>Python</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">☕</span>
+          <span>Java</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">⚙️</span>
+          <span>C / C++</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">📊</span>
+          <span>Data Science</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">🤖</span>
+          <span>Machine Learning</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">🕶️</span>
+          <span>AR Design</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">🎮</span>
+          <span>Game Development</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Sharan E</h3>
+      <p class="muted" style="margin-bottom: 1.25rem;">Data Science, Software Development, Game Development, &amp; AR Design enthusiast.</p>
+      <div class="profile-socials">
+        <a href="https://github.com/Sharan-305" target="_blank" rel="noopener" class="social-icon-link" aria-label="GitHub" title="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/sharaneswaran/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtZ7IrZfmQmixYT%2B37Upa8g%3D%3D" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn" title="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sharan E. All Rights Reserved.</p>
+    <p>Crafted with premium responsive architecture.</p>
+  </div>
+</footer>
+
+</body>
+</html>
