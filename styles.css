@@ -881,3 +881,327 @@ footer {
     opacity: 0;
   }
 }
+
+/* --- CANVA RESUME THEME SUB-SYSTEM --- */
+
+/* Resume container styling */
+.resume-sheet {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 3.5rem 3.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background var(--transition-normal), border var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+}
+
+[data-theme="light"] .resume-sheet {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Resume header: phone, email, avatar, title */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+[data-theme="light"] .resume-header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.resume-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.resume-contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-contact-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-primary);
+}
+
+[data-theme="light"] .resume-contact-label {
+  color: #ca8a04; /* Ochre/gold in light mode */
+}
+
+.resume-contact-value {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.resume-contact-value a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.resume-contact-value a:hover {
+  color: var(--accent-primary);
+}
+
+/* Profile photo box */
+.resume-avatar-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.resume-avatar-frame {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--border-radius-sm);
+  border: 3px solid var(--accent-primary);
+  overflow: hidden;
+  box-shadow: 0 8px 20px var(--accent-glow);
+}
+
+[data-theme="light"] .resume-avatar-frame {
+  border-color: #ca8a04;
+  box-shadow: 0 8px 20px rgba(202, 138, 4, 0.15);
+}
+
+.resume-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resume-avatar-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-primary);
+}
+
+[data-theme="light"] .resume-avatar-title {
+  color: #ca8a04;
+}
+
+/* Large stacked name */
+.resume-name-section {
+  margin-bottom: 3rem;
+}
+
+.resume-name-text {
+  font-family: var(--font-heading);
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .resume-name-text {
+  color: #1f2328;
+}
+
+/* Grid layout: two columns */
+.resume-body-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.9fr;
+  gap: 3.5rem;
+}
+
+.resume-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Headings in resume sections */
+.resume-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-primary);
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+[data-theme="light"] .resume-section-title {
+  color: #ca8a04;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.resume-section-content {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+[data-theme="light"] .resume-section-content {
+  color: #374151;
+}
+
+/* Chronological items (Education & Work Experience/Projects) */
+.resume-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resume-timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.resume-timeline-date {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+[data-theme="light"] .resume-timeline-date {
+  color: #6b7280;
+}
+
+.resume-timeline-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-timeline-org {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+[data-theme="light"] .resume-timeline-org {
+  color: #1f2328;
+}
+
+.resume-timeline-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+}
+
+[data-theme="light"] .resume-timeline-role {
+  color: #b45309;
+}
+
+.resume-timeline-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+[data-theme="light"] .resume-timeline-desc {
+  color: #4b5563;
+}
+
+/* Skills section horizontal pills list */
+.resume-skills-section {
+  margin-top: 3rem;
+  border-top: 2px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+[data-theme="light"] .resume-skills-section {
+  border-top: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.resume-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.resume-skill-pill {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  transition: transform var(--transition-fast), border var(--transition-fast), background var(--transition-fast);
+  cursor: default;
+}
+
+[data-theme="light"] .resume-skill-pill {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #1f2328;
+}
+
+.resume-skill-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  background: var(--accent-glow);
+}
+
+[data-theme="light"] .resume-skill-pill:hover {
+  border-color: #ca8a04;
+  background: rgba(202, 138, 4, 0.06);
+}
+
+/* Responsiveness for resume layout */
+@media (max-width: 768px) {
+  .resume-sheet {
+    padding: 2.5rem 1.5rem;
+    margin: 1rem;
+  }
+  .resume-header {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  .resume-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .resume-name-text {
+    font-size: 3rem;
+  }
+  .resume-body-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .resume-timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
