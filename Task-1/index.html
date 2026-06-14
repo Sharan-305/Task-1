@@ -81,45 +81,111 @@
 
 
   <main id="main-content">
-    <section aria-labelledby="hero-title" class="hero">
-      <h2 id="hero-title">Welcome to My Portfolio</h2>
-      <p>I am Sharan E, a developer passionate about Data Science, Software Development, Game Development, and AR Design.</p>
-      <a href="projects.html" class="cta-button">View Projects</a>
-    </section>
+    <article class="resume-sheet" aria-label="Sharan E Resume">
+      <!-- Top contact & avatar row -->
+      <header class="resume-header">
+        <div class="resume-contact">
+          <div class="resume-contact-item">
+            <span class="resume-contact-label">Phone</span>
+            <span class="resume-contact-value">+91 78066962012</span>
+          </div>
+          <div class="resume-contact-item">
+            <span class="resume-contact-label">Email</span>
+            <span class="resume-contact-value"><a href="mailto:sharan.300510@gmail.com">sharan.300510@gmail.com</a></span>
+          </div>
+          <div class="resume-contact-item">
+            <span class="resume-contact-label">Location</span>
+            <span class="resume-contact-value">Chennai, Tamil Nadu, India</span>
+          </div>
+        </div>
 
-    <section aria-labelledby="skills-heading" class="skills-section">
-      <h2 id="skills-heading">Skills</h2>
-      <ul class="skills-grid">
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">🐍</span>
-          <span>Python</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">☕</span>
-          <span>Java</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">⚙️</span>
-          <span>C / C++</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">📊</span>
-          <span>Data Science</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">🤖</span>
-          <span>Machine Learning</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">🕶️</span>
-          <span>AR Design</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">🎮</span>
-          <span>Game Development</span>
-        </li>
-      </ul>
-    </section>
+        <div class="resume-avatar-box">
+          <div class="resume-avatar-frame">
+            <img src="avatar.png" alt="Sharan E Profile Photo" class="resume-avatar-img">
+          </div>
+          <div class="resume-avatar-title">Developer &amp; Scientist</div>
+        </div>
+      </header>
+
+      <!-- Large stacked name -->
+      <section class="resume-name-section">
+        <h2 class="resume-name-text">Sharan<br>E</h2>
+      </section>
+
+      <!-- Main body split in two columns -->
+      <div class="resume-body-grid">
+        <!-- Left Column -->
+        <div class="resume-column">
+          <section aria-labelledby="resume-about">
+            <h3 id="resume-about" class="resume-section-title">About Me</h3>
+            <div class="resume-section-content">
+              <p>I am Sharan E, a technology enthusiast with deep interests in Data Science, Machine Learning, Web Development, AR Design, and Game Development. I focus on creating clean, accessible, and high-performance solutions to solve complex problems.</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="resume-education">
+            <h3 id="resume-education" class="resume-section-title">Education</h3>
+            <div class="resume-timeline">
+              <div class="resume-timeline-item">
+                <div class="resume-timeline-date">[2024 - 2028]</div>
+                <div class="resume-timeline-details">
+                  <div class="resume-timeline-org">Engineering College</div>
+                  <div class="resume-timeline-role">Bachelor of Engineering</div>
+                  <p class="resume-timeline-desc">Major in Engineering and Technology Science</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Column -->
+        <div class="resume-column">
+          <section aria-labelledby="resume-experience">
+            <h3 id="resume-experience" class="resume-section-title">Projects</h3>
+            <div class="resume-timeline">
+              <div class="resume-timeline-item">
+                <div class="resume-timeline-date">[2025 - PRES]</div>
+                <div class="resume-timeline-details">
+                  <div class="resume-timeline-org">Weather Forecast Engine</div>
+                  <div class="resume-timeline-role">Machine Learning Developer</div>
+                  <p class="resume-timeline-desc">Designed a machine learning-based forecasting engine to predict precipitation and temperature anomalies using historical sensor data.</p>
+                </div>
+              </div>
+              <div class="resume-timeline-item">
+                <div class="resume-timeline-date">[2024 - 2025]</div>
+                <div class="resume-timeline-details">
+                  <div class="resume-timeline-org">AR Visualization Tool</div>
+                  <div class="resume-timeline-role">Unity Developer</div>
+                  <p class="resume-timeline-desc">Developed an interactive, cross-platform augmented reality tool mapping complex engineering and architectural models in real-time space.</p>
+                </div>
+              </div>
+              <div class="resume-timeline-item">
+                <div class="resume-timeline-date">[2023 - 2024]</div>
+                <div class="resume-timeline-details">
+                  <div class="resume-timeline-org">3D Gameplay Showcase</div>
+                  <div class="resume-timeline-role">C++ &amp; Unreal Engine Dev</div>
+                  <p class="resume-timeline-desc">Programmed modular player locomotion systems, enemy AI behaviors, and procedural quest states for a dynamic 3D gameplay demo.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Skills footer section -->
+      <section aria-labelledby="resume-skills" class="resume-skills-section">
+        <h3 id="resume-skills" class="resume-section-title">Skills</h3>
+        <ul class="resume-skills-list">
+          <li class="resume-skill-pill">Python</li>
+          <li class="resume-skill-pill">Java</li>
+          <li class="resume-skill-pill">C / C++</li>
+          <li class="resume-skill-pill">Data Science</li>
+          <li class="resume-skill-pill">Machine Learning</li>
+          <li class="resume-skill-pill">AR Design</li>
+          <li class="resume-skill-pill">Game Development</li>
+        </ul>
+      </section>
+    </article>
   </main>
 
   <footer>
